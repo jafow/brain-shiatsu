@@ -78,9 +78,9 @@ body {
     height: 560px;
     width: 640px;
     margin: 0 auto;
-    -webkit-animation: BLINKER-2 8s infinite;
-    -moz-animation: BLINKER-2 8s infinite;
-    animation: BLINKER-2 8s infinite;
+    -webkit-animation: BLINKER-0 8s infinite;
+    -moz-animation: BLINKER-0 8s infinite;
+    animation: BLINKER-0 8s infinite;
 }
 #blinker1 {
     height: 560px;

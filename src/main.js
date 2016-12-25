@@ -1,17 +1,32 @@
-cracked().sine(1.95).gain({gain:48, modulates:"frequency"}).sine().dac(0.10)
-cracked().sine(0.22).gain(100)
-  .delay({modulates:"frequency", delay:1}).sine().connect('dac')
+var envelope = {
+  'attack': 0.1,
+  'decay': 0.2,
+  'release': 3.5
+}
 
-cracked().sine({frequency:110, detune:0.33}).connect('dac')
+var syn = new Tone.MonoSynth({
+  'oscillator': {
+    'type': 'triangle'
+  },
+  envelope,
+  'filterEnvelope': {
+    'attack': 0,
+    'decay': 0,
+    'release': 100,
+    'baseFrequency': 128,
+    'octaves': 2
+  },
+})
 
-/////////////////////////////////////////////////////////////////////////////////
-///Shiatsu Number: 2    /////////////////////////////////////////////////////////
-cracked().sine(136).dac().play();
-// cracked().loop({steps: 6, interval: 320});
+var syn1 = new Tone.Synth({
+  'oscillator': {
+    'type': 'sine'
+  },
+  envelope
+})
 
-cracked("sine").bind("step", function (data, i, array) { 
-    cracked.frequency(array[i] * 18);
-    cracked.frequency(array[i] * 111).compressor();
-}, [3, 0, 2, 4, 1, 3]);
+syn.toMaster()
+syn1.toMaster()
+syn.triggerAttackRelease('B4', '2s')
+syn.triggerAttackRelease('B2', '2s')
 
-cracked().loop("start");
