@@ -23,28 +23,50 @@ body {
     0%   { opacity: 0.2; background-color: green;}
 
 }
-@-moz-keyframes BLINKER-2 {
+@-moz-keyframes BLINKER-0 {
     10%   { opacity: 0;, background-color: white; }
     100% { opacity: 1; background-color: gray;}
     64%  { opacity: 1; background-color: blue;}
     44%  { opacity: 0.7; background-color: darkgray;}
     0%   { opacity: 0.3; background-color: black;}
 }
-@-o-keyframes BLINKER-2 {
+@-o-keyframes BLINKER-0 {
     10%   { opacity: 0;, background-color: white; }
     100% { opacity: 1; background-color: gray;}
     64%  { opacity: 1; background-color: blue;}
     44%  { opacity: 0.7; background-color: darkgray;}
     0%   { opacity: 0.3; background-color: black;}
 }
-@keyframes BLINKER-2 {
+@keyframes BLINKER-0 {
     10%   { opacity: 0;, background-color: white; }
     100% { opacity: 1; background-color: gray;}
     64%  { opacity: 1; background-color: blue;}
     44%  { opacity: 0.7; background-color: darkgray;}
     0%   { opacity: 0.3; background-color: black;}
 }
-#blinker1 {
+
+@-moz-keyframes BLINKER-1 {
+    10%   { opacity: 0;, background-color: white; }
+    100% { opacity: 1; background-color: gray;}
+    64%  { opacity: 1; background-color: blue;}
+    44%  { opacity: 0.7; background-color: darkgray;}
+    0%   { opacity: 0.3; background-color: black;}
+}
+@-o-keyframes BLINKER-1 {
+    10%   { opacity: 0;, background-color: white; }
+    100% { opacity: 1; background-color: gray;}
+    64%  { opacity: 1; background-color: blue;}
+    44%  { opacity: 0.7; background-color: darkgray;}
+    0%   { opacity: 0.3; background-color: black;}
+}
+@keyframes BLINKER-1 {
+    10%   { opacity: 0;, background-color: white; }
+    100% { opacity: 1; background-color: gray;}
+    64%  { opacity: 1; background-color: blue;}
+    44%  { opacity: 0.7; background-color: darkgray;}
+    0%   { opacity: 0.3; background-color: black;}
+}
+#blinker-home {
     height: 560px;
     width: 640px;
     margin: 0 auto;
@@ -52,11 +74,19 @@ body {
     -moz-animation: BLINKER 5s infinite;
     animation: BLINKER 5s infinite;
 }
-#blinker2 {
+#blinker0 {
     height: 560px;
     width: 640px;
     margin: 0 auto;
     -webkit-animation: BLINKER-2 8s infinite;
     -moz-animation: BLINKER-2 8s infinite;
     animation: BLINKER-2 8s infinite;
+}
+#blinker1 {
+    height: 560px;
+    width: 640px;
+    margin: 0 auto;
+    -webkit-animation: BLINKER-1 8s infinite;
+    -moz-animation: BLINKER-1 8s infinite;
+    animation: BLINKER-1 8s infinite;
 }
