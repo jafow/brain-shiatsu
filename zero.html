@@ -11,12 +11,12 @@
     <a href="one.html">Next</a>
     <script src="src/cracked.min.js"></script>
     <script>
-        // Shiatsu 0
         cracked()
             .sine(1.95)
             .gain({gain:48, modulates:"frequency"})
             .sine()
             .dac(0.10)
+            .play()
 
         cracked()
             .sine(0.22)
@@ -24,9 +24,8 @@
             .delay({modulates:"frequency", delay:1})
             .sine()
             .connect('dac')
-            console.log('inn')
 
-        cracked().sine({frequency:110, detune:0.33}).connect('dac')
+        cracked().sine({frequency:110, detune:0.33}).connect('dac').play()
     </script>
 </body>
 </html>
