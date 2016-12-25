@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Shiatsu 0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Good Sounds Sound Good </h1>
+    <div id="blinker0"></div>
+    <p>(Turn up the headphones)</p>
+    <hr>
+    <a href="one.html">Next</a>
+    <script src="src/cracked.min.js"></script>
+    <script>
+        // Shiatsu 0
+        cracked()
+            .sine(1.95)
+            .gain({gain:48, modulates:"frequency"})
+            .sine()
+            .dac(0.10)
+
+        cracked()
+            .sine(0.22)
+            .gain(100)
+            .delay({modulates:"frequency", delay:1})
+            .sine()
+            .connect('dac')
+            console.log('inn')
+
+        cracked().sine({frequency:110, detune:0.33}).connect('dac')
+    </script>
+</body>
+</html>
